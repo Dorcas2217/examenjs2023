@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:3000
+
+### Create a purchase
+POST {{baseUrl}}/purchases/
+Content-Type: application/json
+
+{
+    "pseudo":"user2",
+    "product":1,
+    "quantity":3
+}
+
+### Get the best client of product
+GET {{baseUrl}}/purchases/2
+
+### Get the product for client
+GET {{baseUrl}}/purchases/recommendations/:user1
